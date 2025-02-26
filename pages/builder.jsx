@@ -14,7 +14,6 @@ import Projects from "../components/form/Projects";
 import Education from "../components/form/Education";
 import dynamic from "next/dynamic";
 import Certification from "../components/form/certification";
-import { SparklesCore } from "../components/ui/Sparkless";
 
 const ResumeContext = createContext(DefaultResumeData);
 
@@ -67,33 +66,20 @@ export default function Builder(props) {
         />
         <div className="f-col gap-4 md:flex-row justify-evenly max-w-full md:mx-auto md:h-screen">
           {!formClose && (
-            <div className="relative w-full h-full md:overflow-y-scroll exclude-print bg-black">
-              <div className="w-full absolute inset-0 z-0">
-                <SparklesCore
-                  id="tsparticlesfullpage"
-                  background="transparent"
-                  minSize={0.6}
-                  maxSize={1.4}
-                  particleDensity={100}
-                  className="w-full h-full"
-                  particleColor="#FFFFFF"
-                />
-              </div>
-              <form className="p-4 bg-zinc-900 exclude-print w-full h-full md:overflow-y-scroll">
-                <LoadUnload />
-                <PersonalInformation />
-                <SocialMedia />
-                <Summary />
-                <Education />
-                <WorkExperience />
-                <Projects />
-                {resumeData.skills.map((skill, index) => (
-                  <Skill title={skill.title} key={index} />
-                ))}
-                <Language />
-                <Certification />
-              </form>
-            </div>
+            <form className="p-4 bg-zinc-900 exclude-print w-full h-full md:overflow-y-scroll">
+              <LoadUnload />
+              <PersonalInformation />
+              <SocialMedia />
+              <Summary />
+              <Education />
+              <WorkExperience />
+              <Projects />
+              {resumeData.skills.map((skill, index) => (
+                <Skill title={skill.title} key={index} />
+              ))}
+              <Language />
+              <Certification />
+            </form>
           )}
           <Preview className="w-full h-full" />
         </div>
