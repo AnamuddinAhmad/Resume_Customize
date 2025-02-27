@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 export default function Meta({ title, keywords, description }) {
-  const homepage = "https://free-next-resume-maker.vercel.app";
+  const homepage = "https://resume-maker-kappa.vercel.app/builder";
   const logo = "/assets/logo.png";
   const fevicon = "/assets/logo.png";
   function isiteJsonLd() {
