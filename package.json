@@ -18,12 +18,15 @@
     "@types/react-dom": "18.0.10",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
+    "glob": "^11.0.1",
+    "lru-cache": "^11.0.2",
     "next": "14.2.15",
     "react": "^18",
     "react-beautiful-dnd": "^13.1.1",
     "react-dom": "^18",
     "react-icons": "^4.7.1",
-    "react-simple-typewriter": "^5.0.1"
+    "react-simple-typewriter": "^5.0.1",
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
